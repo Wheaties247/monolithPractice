@@ -12,7 +12,8 @@ public class Song {
     public Song(String songTitle, Long songLength) {
         this.songTitle = songTitle;
         this.songLength = songLength;
-
+        //these are the params that need to match int the JSON object being sent in requests
+        //exe. this.{param}
     }
 
     @Id

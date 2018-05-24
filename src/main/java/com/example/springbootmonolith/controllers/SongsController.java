@@ -34,12 +34,13 @@ public class SongsController {
     }
     @PostMapping("/songs")
     public Song createNewSong(@RequestBody Song newSong) {
+        System.out.println("SONG POSTED");
         return songRepository.save(newSong);
     }
 
     @PatchMapping("/songs/{songId}")
     public Song updateSongById(@PathVariable Long songId, @RequestBody Song songRequest) {
-
+        System.out.println("SONG PATCHED");
         Song songFromDb = songRepository.findById(songId).get();
 
         songFromDb.setSongTitle(songRequest.getSongTitle());
